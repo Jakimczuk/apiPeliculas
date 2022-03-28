@@ -8,7 +8,7 @@ module.exports = (sequelize, type) => {  //exporto una funcion que voy a reutili
         },
         username: type.STRING,
         password: type.STRING,
-        email: type.DATE
+        email: type.STRING
 
 
     })

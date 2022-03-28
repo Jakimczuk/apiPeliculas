@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const MovieModel = require('./models/movies');
-//const UserModel = require('./models/users');
+const UserModel = require('./models/users');
 const GenderModel = require('./models/gender');
 const CharacterModel = require('./models/characters')
 
@@ -13,7 +13,7 @@ const sequelize = new Sequelize('apipeliculas', 'root', '', { //primero el nombr
 });
 
 const Movie = MovieModel(sequelize, Sequelize);
-//const User = UserModel(sequelize,Sequelize);
+const User = UserModel(sequelize, Sequelize);
 const Gender = GenderModel(sequelize, Sequelize);
 const Character = CharacterModel(sequelize, Sequelize);
 
@@ -33,7 +33,7 @@ sequelize.sync({ force: false })
 
 module.exports = {
     Movie,
-    // User,
+    User,
     Gender,
     Character,
     sequelize
